@@ -58,6 +58,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = "RailwayTicketManagement.urls"
@@ -87,9 +88,9 @@ WSGI_APPLICATION = "RailwayTicketManagement.wsgi.application"
 DATABASES = {
     'default': {
        'ENGINE': 'django.db.backends.postgresql',
-       'NAME': 'project',
+       'NAME': 'ticketbooking',
        'USER': 'postgres',
-       'PASSWORD': 'postgres',
+       'PASSWORD': '1595697',
        'HOST': 'localhost',
        'PORT': '5432',
    }

@@ -41,4 +41,15 @@ urlpatterns = [
     
     # Custom Views
     path('trains/route/', views.get_trains_by_route, name='get_trains_by_route'),
+    path('train/details/<int:train_no>/', views.get_train_details, name='get_train_details'),
+    path('train/available-seats/<int:train_no>/', views.get_available_seats, name='get_available_seats'),
+    path('train/book-ticket/<int:train_no>/', views.book_ticket, name='book_ticket'),
+    path('train/cancel-ticket/<int:train_no>/<int:ticket_id>/', views.cancel_ticket, name='cancel_ticket'),
+    path('tickets/', views.list_user_tickets, name='list-user-tickets'),
+    path('tickets/<int:train_no>/<int:ticket_id>/', views.get_user_ticket_details, name='get-user-ticket-details'),
+    path('tickets/<int:train_no>/<int:ticket_id>/make-payment/', views.make_payment, name='make-payment'),
+    path('tickets/<int:train_no>/<int:ticket_id>/payment-details/', views.get_payment_details, name='get-payment-details'),
+    path('trains/<int:train_no>/halts/', views.list_halts_for_train, name='train-halts'),
+    path('stations/<int:station_id>/trains/', views.list_trains_for_station, name='station-trains'),
+
 ]
