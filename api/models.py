@@ -31,6 +31,7 @@ class Train(models.Model):
     train_no = models.AutoField(primary_key=True)
     train_name = models.CharField(max_length=100)
     available_seats = models.IntegerField()
+    route = models.ForeignKey(Route, on_delete=models.CASCADE)
     schedule = models.ForeignKey(Schedule, on_delete=models.CASCADE)
 
     def __str__(self):
